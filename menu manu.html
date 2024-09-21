@@ -1,0 +1,370 @@
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>MANU</title>
+<link rel="shortcut icon" href="rolex.png">
+<style type="text/css">
+   body {
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+ 
+#page {
+    margin: 0px auto;
+    width: 100%;
+}
+ 
+#header {
+    position: sticky;
+    top: 5%;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: none;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+ 
+#content {
+    height: 100%;
+    overflow: auto;
+    padding: 0% 1% 0% 1%;
+    width: 98%;
+}
+    
+    body{
+        background-image: url(fondo%20god.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #222;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  background-color: darkgrey;
+  z-index: 7;
+
+  li {
+    float: left;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    z-index: 9;
+  }
+}
+
+a.active {
+  background-color: #e74c3c;
+  pointer-events: none;
+}
+
+li.slider {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e74c3c;
+  z-index: 8;
+  transition: left .4s, background-color .4s;
+}
+
+.menu li:nth-child(1):hover,
+.menu li:nth-child(1):focus,
+.menu li:nth-child(1):active {
+  & ~ .slider {
+    left: 0;
+    background-color: #3498db;
+  }
+}
+
+
+.menu li:nth-child(2):hover,
+.menu li:nth-child(2):focus,
+.menu li:nth-child(2):active {
+  & ~ .slider {
+    left: 25%;
+    background-color: #9b59b6;
+  }
+}
+
+.menu li:nth-child(3):hover,
+.menu li:nth-child(3):focus,
+.menu li:nth-child(3):active {
+  & ~ .slider {
+    left: 50%;
+    background-color: #e67e22;
+  }
+}
+
+.menu li:nth-child(4):hover,
+.menu li:nth-child(4):focus,
+.menu li:nth-child(4):active {
+  & ~ .slider {
+    left: 75%;
+    background-color: #16a085;
+  }
+}
+     
+    h2 {
+        font-size: 25;
+        color: white;
+    }
+  
+    p {
+        font-size: 20;
+        color: white; 
+    }
+    
+    footer {
+            background-color: NONE ;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            color: gainsboro;
+        }
+    .text-center {
+            text-align: center;
+        }
+    .caja {  
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: none ; 
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid none ;
+ position: absolute;
+  top: 70%;
+  left: 10%;
+  margin: -20px 0 0 -20px;     
+}
+.caja2 {  
+color: #ffffff; 
+font-size: 18px; 
+font-weight: 400; 
+text-align: center; 
+background: none ; 
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid none ;
+ position: absolute;
+  top: 150%;
+  left: 85%;
+  margin: -20px 0 0 -20px;     
+}
+/* Contenedor general y reset de margin y padding */
+.expandir * {
+margin: 0;
+padding: 0;
+}
+.expandir {
+font-family:Arial, Helvetica, sans-serif;
+line-height:normal;
+margin:20px auto 30px;
+height:120px;
+width:170px;
+}
+/* Las imágenes irán en forma de lista */
+.expandir ul {
+padding-top:10px;
+margin-left:10px;
+}
+/* Se hacen flotar los elementos para que queden en línea y se elimina el estilo que podría haber predefinido para listas */
+.expandir ul li {
+float:left;
+list-style-type:none;
+}
+/* Anulamos estilo predifinido para enlaces en listas */
+.expandir ul li a {
+text-decoration:none;
+}
+/* Estilo de cada imagen en situación inicial y transición suave */
+.expandir ul li a img {
+width:50px; /* Ancho inicial imagénes. 50% real */
+height:50px; /* Alto inicial imagénes. 50% real */
+border:none;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+transition: all .3s ease-in;
+}
+/* El texto que acompaña a las imágenes no se ve inicialmente */
+.expandir ul li a span {
+display:none;
+}
+/* Mostramos el texto al hacer hover */
+.expandir ul li:hover a span {
+display:block;
+font-size:14px;
+text-align:center;
+color:white;
+}
+/* Agrandamos la imagen al hacer hover */
+.expandir ul li:hover a img {
+width:100px;
+height:100px;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+
+    fotos{
+position: absolute;
+  top: 70%;
+  left: 30%;
+  margin: -20px 0 0 -20px;
+    }    
+.imagen:hover{
+border-radius:50%;
+-webkit-border-radius:50%;
+box-shadow: 0px 0px 15px 15px #C70039;
+-webkit-box-shadow: 0px 0px 15px 15px #C70039;
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+}
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .container {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color:lightseagreen;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid  ;
+            position: absolute;
+            top: 65%;
+            left: 30%;
+            margin: -20px 0 0 -20px;
+      }
+       .container2 {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: lightseagreen;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid  ;
+            position: absolute;
+            top: 103%;
+            left: 30%;
+            margin: -20px 0 0 -20px;
+      }
+ 
+ 
+        p {
+            color: white;
+            line-height: 1.6; }
+  .top {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  position:sticky;
+  bottom: 20px; 
+}
+</style>
+</head>
+<body>
+<div id="page">
+    <div id="header"> 
+    <ul class="menu">
+  <li><a href="quiensoy.html" class="active">¿Quien Soy?</a></li>
+  <li><a href="dondeestudie.html">¿Donde Estudie?</a></li>
+  <li><a href="misviajes.html">Mis Viajes</a></li>
+  <li><a href="formulario.html">Contactame</a></li>
+  <li class="slider"></li>
+</ul></div>
+</div>
+<div class="caja"><div class="expandir">
+<ul>
+<li><a href="https://www.instagram.com/playboirojas?igsh=OHl1ejZldGRkbGpp=mx"><img src="ih.jpg" width="35"heigth="35"><span>INSTAGRAM</span></a></li>
+<li><a href="https://www.tiktok.com/@wavymanu?is_from_webapp=1&sender_device=mx"><img src="tiktok.png" width="35"heigth="35"><span>TIK TOK</span></a></li>
+</ul>
+</div>
+</div>
+    <div class="caja2"> <div> <a href="#" class="top">VOLVER</a></div> </div>
+<center><div class="container">
+<div class="card">
+<p> 𝘏𝘰𝘭𝘢! 𝘔𝘶𝘤𝘩𝘰 𝘨𝘶𝘴𝘵𝘰 𝘴𝘰𝘺 𝘑𝘶𝘢𝘯 𝘔𝘢𝘯𝘶𝘦𝘭 𝘔𝘢𝘳𝘵𝘪𝘯𝘦𝘻 𝘙𝘰𝘫𝘢𝘴,𝘱𝘦𝘳𝘰 𝘮𝘪𝘴 𝘢𝘮𝘪𝘨𝘰𝘴 𝘮𝘦 𝘥𝘪𝘤𝘦𝘯 𝘔𝘢𝘯𝘶. 𝘌𝘴𝘵𝘢 𝘱𝘢𝘨𝘪𝘯𝘢 𝘧𝘶𝘦 𝘤𝘳𝘦𝘢𝘥𝘢 𝘤𝘰𝘯 𝘧𝘪𝘯𝘦𝘴 𝘥𝘦 𝘲𝘶𝘦 𝘭𝘢 𝘨𝘦𝘯𝘵𝘦 𝘦𝘯𝘵𝘳𝘦 𝘺 𝘴𝘦𝘱𝘢 𝘮𝘢𝘴 𝘥𝘦 𝘮𝘪 𝘵𝘢𝘯𝘵𝘰 𝘥𝘦 𝘮𝘪 𝘷𝘪𝘥𝘢 𝘱𝘦𝘳𝘴𝘰𝘯𝘢𝘭. 𝘓𝘢 𝘮𝘢𝘦𝘴𝘵𝘳𝘢 𝘲𝘶𝘦 𝘯𝘰𝘴 𝘦𝘯𝘴𝘦ñ𝘰 𝘺 𝘨𝘶𝘪𝘰 𝘧𝘶𝘦 𝘚𝘢𝘯𝘥𝘳𝘢 𝘟𝘰𝘤𝘩𝘪𝘵𝘭 𝘥𝘰𝘤𝘦𝘯𝘵𝘦 𝘦𝘯 𝘋𝘪𝘴𝘦ñ𝘰 𝘺 𝘦𝘭𝘢𝘣𝘰𝘳𝘢𝘤𝘪𝘰𝘯 𝘥𝘦 𝘱𝘢𝘨𝘪𝘯𝘢𝘴 𝘸𝘦𝘣, 𝘦𝘭𝘭𝘢 𝘯𝘰𝘴 𝘦𝘯𝘴𝘦ñ𝘰 𝘵𝘰𝘥𝘰 𝘥𝘦 𝘱𝘢𝘨𝘪𝘯𝘢𝘴 𝘸𝘦𝘣 𝘥𝘦𝘴𝘥𝘦 𝘭𝘰 𝘮𝘢𝘴 𝘣𝘢𝘴𝘪𝘤𝘰 𝘩𝘢𝘴𝘵𝘢 𝘤𝘰𝘴𝘢𝘴 𝘮𝘢𝘴 𝘤𝘰𝘮𝘱𝘭𝘦𝘫𝘢𝘴. 𝘌𝘭𝘭𝘢 𝘢𝘩 𝘴𝘪𝘥𝘰 𝘶𝘯𝘢 𝘦𝘹𝘦𝘭𝘦𝘯𝘵𝘦 </p></div></div></center>
+<center><div class="container2">
+<div class="card">
+<p> 𝘏𝘰𝘭𝘢! 𝘔𝘶𝘤𝘩𝘰 𝘨𝘶𝘴𝘵𝘰 𝘴𝘰𝘺 𝘑𝘶𝘢𝘯 𝘔𝘢𝘯𝘶𝘦𝘭 𝘔𝘢𝘳𝘵𝘪𝘯𝘦𝘻 𝘙𝘰𝘫𝘢𝘴,𝘱𝘦𝘳𝘰 𝘮𝘪𝘴 𝘢𝘮𝘪𝘨𝘰𝘴 𝘮𝘦 𝘥𝘪𝘤𝘦𝘯 𝘔𝘢𝘯𝘶. 𝘌𝘴𝘵𝘢 𝘱𝘢𝘨𝘪𝘯𝘢 𝘧𝘶𝘦 𝘤𝘳𝘦𝘢𝘥𝘢 𝘤𝘰𝘯 𝘧𝘪𝘯𝘦𝘴 𝘥𝘦 𝘲𝘶𝘦 𝘭𝘢 𝘨𝘦𝘯𝘵𝘦 𝘦𝘯𝘵𝘳𝘦 𝘺 𝘴𝘦𝘱𝘢 𝘮𝘢𝘴 𝘥𝘦 𝘮𝘪 𝘵𝘢𝘯𝘵𝘰 𝘥𝘦 𝘮𝘪 𝘷𝘪𝘥𝘢 𝘱𝘦𝘳𝘴𝘰𝘯𝘢𝘭. 𝘓𝘢 𝘮𝘢𝘦𝘴𝘵𝘳𝘢 𝘲𝘶𝘦 𝘯𝘰𝘴 𝘦𝘯𝘴𝘦ñ𝘰 𝘺 𝘨𝘶𝘪𝘰 𝘧𝘶𝘦 𝘚𝘢𝘯𝘥𝘳𝘢 𝘟𝘰𝘤𝘩𝘪𝘵𝘭 𝘥𝘰𝘤𝘦𝘯𝘵𝘦 𝘦𝘯 𝘋𝘪𝘴𝘦ñ𝘰 𝘺 𝘦𝘭𝘢𝘣𝘰𝘳𝘢𝘤𝘪𝘰𝘯 𝘥𝘦 𝘱𝘢𝘨𝘪𝘯𝘢𝘴 𝘸𝘦𝘣, 𝘦𝘭𝘭𝘢 𝘯𝘰𝘴 𝘦𝘯𝘴𝘦ñ𝘰 𝘵𝘰𝘥𝘰 𝘥𝘦 𝘱𝘢𝘨𝘪𝘯𝘢𝘴 𝘸𝘦𝘣 𝘥𝘦𝘴𝘥𝘦 𝘭𝘰 𝘮𝘢𝘴 𝘣𝘢𝘴𝘪𝘤𝘰 𝘩𝘢𝘴𝘵𝘢 𝘤𝘰𝘴𝘢𝘴 𝘮𝘢𝘴 𝘤𝘰𝘮𝘱𝘭𝘦𝘫𝘢𝘴. 𝘌𝘭𝘭𝘢 𝘢𝘩 𝘴𝘪𝘥𝘰 𝘶𝘯𝘢 𝘦𝘹𝘦𝘭𝘦𝘯𝘵𝘦 </p></div></div></center>
+<center><img class="imagen" src=rhlm.jpg  width="200"heigth="300"/>
+<img class="imagen" src=foto%20con%20andrea.jpg  width="200"heigth="300"/>
+<img class="imagen" src=drip.jpg  width="200"heigth="300"/>
+<img class="imagen" src="yo.jpg"  width="200"heigth="300"/>
+<img class="imagen" src=%C3%B1ip.png  width="200"heigth="300"/> 
+<img class="imagen" src=jsjsjs.jpg  width="200"heigth="300"/>
+<img class="imagen" src=graduados.jpg  width="200"heigth="300"/></center>
+</body>
+</html>
+
+
+
+
+
